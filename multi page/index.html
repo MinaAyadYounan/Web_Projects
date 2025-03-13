@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="multiPage.css">
+    <title>Multi page</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="sideBar">
+                <div class="Btnradio">
+                    <div class="active" step-num="1">
+                        <span class="item" data-name="Your Info" > STEP 1</span>
+                    </div>
+                    <div  step-num="2">
+                        <span class="item" data-name="Select Plan">STEP 2</span>
+                    </div>
+                    <div step-num="3">
+                        <span class="item" data-name="Add-Ons" >STEP 3</span>
+                    </div>
+                        <div step-num="4">
+                        <span class="item" data-name="Summary" >STEP 4</span>
+                    </div>
+
+            </div>
+            
+        </div>
+     <div class="content">
+        <div class="yourInfo">
+            <div class="textHeader">
+                <h2>Personal info</h2>
+                <p>Please provide your name, email address, and phone number.</p>
+            </div>
+            <form action="" class = "info-form">
+                <label for="name">Name</label>
+                <input type="text" required id ="name" placeholder="e.g. Stephen King" >
+                <label for="Email">Email Address</label>
+                <input type="email" id ="Email" placeholder=" e.g. stephenking@lorem.com" required>
+                <label for="Phone">Phone Number</label>
+                <input type="number" id ="Phone" placeholder="  e.g. +1 234 567 890" required>
+                <button class="next-step">Next Step</button>
+            </form>
+     </div>
+
+     <!-- start Select plan -->
+     <div class="selectPlan">
+            <div class="textHeader">
+                <h2>Select your plan</h2>
+                <p>You have the option of monthly or yearly billing.</p>
+            </div>
+                <form action="" class="plan-form">
+                    <input type="radio" id="arcade" name ="item" value="arcade">
+                    <label for="arcade" class="selectItem">
+                    <div class="planItem">
+                        <img src="./assets/images/icon-arcade.svg" alt="">
+                        <h2>Arcade</h2>
+                        <p>$9/mo</p>
+                    </div>
+                    </label>
+                    <input type="radio" id="advanced" name ="item" value="advanced">
+                    <label for="advanced" class="selectItem">
+                    <div class="planItem">
+                        <img src="./assets/images/icon-advanced.svg" alt="">
+                        <h2>Advanced</h2>
+                        <p>$12/mo</p>
+                    </div>
+                    </label>
+                    <input type="radio" id="pro" name ="item" value="pro">
+                    <label for="pro" class="selectItem">
+                    <div class="planItem">
+                        <img src="./assets/images/icon-pro.svg" alt="">
+                        <h2>Pro</h2>
+                        <p>$15/mo</p>
+                    </div>
+                </label>
+            <label class="toggle-switch">
+                <p class="activeSwitch">Monthly</p>
+                <input type="checkbox" id = "switch" value="month">
+                <div class="toggle-sympol"></div>
+                <p>Yearly</p>
+            </label>
+            <button class="next-step">Next Step</button>
+            <div class="go-back">Go Back</div>
+                </form>
+     </div>
+    <!-- End Select plan -->
+
+    <!-- start add ons -->
+    <div class="add-ons">
+            <div class="textHeader">
+                <h2>Pick add-ons</h2>
+                <p>Add-ons help enhance your gaming experience.</p>
+            </div>
+            <div class="ons-form">
+                <form action="">
+                    <label class="addonsLab">
+                        <input type="checkbox" name="addons" value="Online Services">
+                        <div>
+                            <h4>Online Services</h4>
+                            <p>Access to multiplayer games</p>
+                        </div>
+                        <span>
+                            +$1/mo
+                        </span>
+                    </label>
+                    
+                    <label class="addonsLab">
+                        <input type="checkbox" name="addons" value="Larger storage">
+                        <div>
+                            <h4>Larger storage</h4>
+                            <p>Extra 1TB of cloud save</p>
+                        </div>
+                        <span>
+                            +$2/mo
+                        </span>
+                    </label>
+
+                    <label class="addonsLab">
+                        <input type="checkbox" name="addons" value="Customizable Profile">
+                        <div>
+                            <h4>Customizable Profile</h4>  
+                            <p>Custom theme on your profile</p>
+                        </div>
+                        <span>
+                            +$2/mo
+                        </span>
+                    </label>
+                    <button class="next-step">Next Step</button>
+                    <div class="go-back">Go Back</div>
+                </form>
+            </div>
+    </div>
+            <!-- End add ons -->
+            <!-- start Finishing page  -->
+        <div class="finishing-page">
+        <div class="textHeader">
+            <h2>Finishing up</h2>
+            <p>  Double-check everything looks OK before confirming.</p>
+            <div class="finshing-parent">
+                <div class= "S-plan">
+                    <h4>Arcade</h4>
+                    <p>change</p>
+                    <span>$9/mo</span>
+                </div>
+                <div class="plan-info">
+                    <p>Online services
+                        <span>+$1/mo</span>
+                    </p>
+                </div>
+                <div class="total">
+                    <span>+$12/mo</span>
+                </div>
+            </div>
+            <div class="next-step">Confirm</div>
+            <div class="go-back">Go Back</div>
+        </div>
+                
+        </div>
+            <!-- End finishing page -->
+    </div>
+    <script src="multiPage.js"></script>
+</body>
+</html>
